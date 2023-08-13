@@ -24,10 +24,6 @@ Intisign aims to be easy to use and protective to your copyright.
 
 A lot of background information is available in the Wiki that belongs to this project.
 
-## Support
-
-Support is available during business hours at <api-support@intisign.nl>.
-
 ## Repository contents
 
 - The [src/authority](src/authority) directory contains the actual source-code.

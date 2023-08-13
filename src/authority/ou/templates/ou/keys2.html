@@ -1,0 +1,11 @@
+{% load static %}         
+                                            
+<link rel="stylesheet" type="text/css" href="{% static 'ou/style.css' %}">   
+
+<h2>List of keys</h2>
+<ul>
+    {% for key in public_keys %}
+        <li>{{ key.key }}</li>
+    {% endfor %}
+</ul>
+

@@ -1,0 +1,59 @@
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: rgb(185,179,175);
+    padding: 10px;
+}
+
+.page {
+    border: 1px solid #665544;
+    background-color: #efefef;
+    padding: inherit;
+    padding-right: 1300px;
+}
+
+h1, h2 {
+    color: rgb(255, 255, 255);
+}
+
+h4 {
+    color: white;
+    background-color: #ee3e80;}
+
+p {
+    color: #665544;}
+
+p.signature {
+    font-family: "Courier New", monospace;}
+
+input {
+    padding: 6px 12px 6px 12px;
+    border: 1px solid #665544;
+    color: #ee3e80;}
+
+input.submit:hover {
+    background-color: #665544;}
+
+input.submit:active {
+    background-color: chocolate;}
+
+input.text {
+    color: #cccccc;}
+
+a:link {
+    color: white;
+    text-decoration: none;}
+
+a:visited {
+    color: white;}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+    text-decoration: underline;
+}
+

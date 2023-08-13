@@ -1,0 +1,21 @@
+
+{% load static %}                                                     
+<link rel="stylesheet" type="text/css" href="{% static 'ou/style.css' %}">   
+
+<h1>Obtain a signature of a document</h1>
+
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+        <input type="file" name="myfile">
+        <input type="submit" value="Sign now">
+    </form>
+
+      {% if uploaded_file_url %}
+      <div class="page"><p class="signature">{{ uploaded_file_url }}</p></a></div>
+  {% endif %}
+
+  <p><a href="{% url 'ou:index' %}"><h4>Check the list of signatures</h4></a></p>
+
+
+

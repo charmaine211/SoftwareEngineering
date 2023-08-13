@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ou package &mdash; Digital Signature Dienst (DSD) dev documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="authority package" href="authority.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Digital Signature Dienst (DSD)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ou</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="authority.html">authority package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ou package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.admin">ou.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.apps">ou.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.models">ou.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.serializers">ou.serializers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.tests">ou.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.urls">ou.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou.views">ou.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ou">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Digital Signature Dienst (DSD)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">ou</a></li>
+      <li class="breadcrumb-item active">ou package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ou.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ou-package">
+<h1>ou package<a class="headerlink" href="#ou-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-ou.admin">
+<span id="ou-admin-module"></span><h2>ou.admin module<a class="headerlink" href="#module-ou.admin" title="Permalink to this heading"></a></h2>
+<p>Admin module, a dashboard for the site admins.
+This dashboard provides all helpdesk functionality.</p>
+<p>Only registered users with role ‘superuser’ can login to this area.
+This area is available at <a class="reference external" href="http://127.0.0.1/admin">http://127.0.0.1/admin</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.admin.KeysAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.admin.</span></span><span class="sig-name descname"><span class="pre">KeysAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.admin.KeysAdmin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<p>Custom class for the Keys Admin Area.
+This class hides the actual key-field to prevent it from modifications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>admin.ModelsAdmin</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new admin class.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.admin.KeysAdmin.fieldsets">
+<span class="sig-name descname"><span class="pre">fieldsets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">((None,</span> <span class="pre">{'fields':</span> <span class="pre">('role',</span> <span class="pre">'platform_used',</span> <span class="pre">'owner'),</span> <span class="pre">'description':</span> <span class="pre">'Let</span> <span class="pre">op,</span> <span class="pre">om</span> <span class="pre">fouten</span> <span class="pre">te</span> <span class="pre">voorkomen</span> <span class="pre">kan</span> <span class="pre">de</span> <span class="pre">key</span> <span class="pre">hier</span> <span class="pre">niet</span> <span class="pre">gewijzigd</span> <span class="pre">worden.'}),)</span></em><a class="headerlink" href="#ou.admin.KeysAdmin.fieldsets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ou.admin.KeysAdmin.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#ou.admin.KeysAdmin.media" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ou.apps">
+<span id="ou-apps-module"></span><h2>ou.apps module<a class="headerlink" href="#module-ou.apps" title="Permalink to this heading"></a></h2>
+<p>Defines the app part OU (package), needed for Django purposes.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.apps.OuConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.apps.</span></span><span class="sig-name descname"><span class="pre">OuConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.apps.OuConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.apps.OuConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ou'</span></em><a class="headerlink" href="#ou.apps.OuConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ou.models">
+<span id="ou-models-module"></span><h2>ou.models module<a class="headerlink" href="#module-ou.models" title="Permalink to this heading"></a></h2>
+<p>This module holds the models used by the application:
+* Platform
+* Keys
+* Signatures</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.models.Keys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.models.</span></span><span class="sig-name descname"><span class="pre">Keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.models.Keys" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>The Keys-model holds the public and private keys.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="ou.models.Keys.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#ou.models.Keys.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ou.models.Keys.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#ou.models.Keys.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ou.models.Keys.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.key">
+<span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#ou.models.Keys.key" title="Permalink to this definition"></a></dt>
+<dd><p>the key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ou.models.Keys.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.owner">
+<span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#ou.models.Keys.owner" title="Permalink to this definition"></a></dt>
+<dd><p>the user that owns this key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>owner</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.owner_id">
+<span class="sig-name descname"><span class="pre">owner_id</span></span><a class="headerlink" href="#ou.models.Keys.owner_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.platform_used">
+<span class="sig-name descname"><span class="pre">platform_used</span></span><a class="headerlink" href="#ou.models.Keys.platform_used" title="Permalink to this definition"></a></dt>
+<dd><p>the platform where this key is used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>platform_used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.platform_used_id">
+<span class="sig-name descname"><span class="pre">platform_used_id</span></span><a class="headerlink" href="#ou.models.Keys.platform_used_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#ou.models.Keys.role" title="Permalink to this definition"></a></dt>
+<dd><p>either public or private</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>role</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Keys.signatures_set">
+<span class="sig-name descname"><span class="pre">signatures_set</span></span><a class="headerlink" href="#ou.models.Keys.signatures_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.models.Platform">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.models.</span></span><span class="sig-name descname"><span class="pre">Platform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.models.Platform" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>The Platform-model contains the platofrm where the key is used</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="ou.models.Platform.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#ou.models.Platform.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ou.models.Platform.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#ou.models.Platform.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Platform.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ou.models.Platform.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Platform.keys_set">
+<span class="sig-name descname"><span class="pre">keys_set</span></span><a class="headerlink" href="#ou.models.Platform.keys_set" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Platform.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ou.models.Platform.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Platform.platform_name">
+<span class="sig-name descname"><span class="pre">platform_name</span></span><a class="headerlink" href="#ou.models.Platform.platform_name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the platform</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>platform_name</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.models.Signatures">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.models.</span></span><span class="sig-name descname"><span class="pre">Signatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.models.Signatures" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>The Signatures-model hold the signatures that were generated for
+the uploaded files.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="ou.models.Signatures.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#ou.models.Signatures.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ou.models.Signatures.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#ou.models.Signatures.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.digest">
+<span class="sig-name descname"><span class="pre">digest</span></span><a class="headerlink" href="#ou.models.Signatures.digest" title="Permalink to this definition"></a></dt>
+<dd><p>hash value of the file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>digest</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.file_name">
+<span class="sig-name descname"><span class="pre">file_name</span></span><a class="headerlink" href="#ou.models.Signatures.file_name" title="Permalink to this definition"></a></dt>
+<dd><p>file name on the filesystem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>file_name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.models.Signatures.get_next_by_time_stamp">
+<span class="sig-name descname"><span class="pre">get_next_by_time_stamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">time_stamp&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.models.Signatures.get_next_by_time_stamp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.models.Signatures.get_previous_by_time_stamp">
+<span class="sig-name descname"><span class="pre">get_previous_by_time_stamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">time_stamp&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.models.Signatures.get_previous_by_time_stamp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ou.models.Signatures.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.key_used">
+<span class="sig-name descname"><span class="pre">key_used</span></span><a class="headerlink" href="#ou.models.Signatures.key_used" title="Permalink to this definition"></a></dt>
+<dd><p>reference to the key of the Keys-model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>key_used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.key_used_id">
+<span class="sig-name descname"><span class="pre">key_used_id</span></span><a class="headerlink" href="#ou.models.Signatures.key_used_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ou.models.Signatures.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.salt">
+<span class="sig-name descname"><span class="pre">salt</span></span><a class="headerlink" href="#ou.models.Signatures.salt" title="Permalink to this definition"></a></dt>
+<dd><p>string used for salting the encryption algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>salt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.signature">
+<span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#ou.models.Signatures.signature" title="Permalink to this definition"></a></dt>
+<dd><p>the calculated signature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>signature</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.models.Signatures.time_stamp">
+<span class="sig-name descname"><span class="pre">time_stamp</span></span><a class="headerlink" href="#ou.models.Signatures.time_stamp" title="Permalink to this definition"></a></dt>
+<dd><p>the timestamp of signing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>time_stamp</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ou.serializers">
+<span id="ou-serializers-module"></span><h2>ou.serializers module<a class="headerlink" href="#module-ou.serializers" title="Permalink to this heading"></a></h2>
+<p>Here the signatures are defined that are in use by the API.
+The API can deal with both signatures and keys, so both are implemented here.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.serializers.KeysSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.serializers.</span></span><span class="sig-name descname"><span class="pre">KeysSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.serializers.KeysSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for keys used by API to define the included fields.
+The serialiazer includes:
+[‘key’, ‘role’, ‘platform_used’, ‘owner’]</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.serializers.KeysSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#ou.serializers.KeysSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.serializers.KeysSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['key',</span> <span class="pre">'role',</span> <span class="pre">'platform_used',</span> <span class="pre">'owner']</span></em><a class="headerlink" href="#ou.serializers.KeysSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.serializers.KeysSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#ou.serializers.KeysSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.models.Keys" title="ou.models.Keys"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keys</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.serializers.SignaturesSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.serializers.</span></span><span class="sig-name descname"><span class="pre">SignaturesSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.serializers.SignaturesSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HyperlinkedModelSerializer</span></code></p>
+<p>Serializer for signatures used by API to define the included fields.
+The serialiazer includes:
+[‘url’, ‘file_name’, ‘digest’, ‘salt’, ‘signature’, ‘time_stamp’]</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.serializers.SignaturesSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#ou.serializers.SignaturesSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.serializers.SignaturesSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['url',</span> <span class="pre">'file_name',</span> <span class="pre">'digest',</span> <span class="pre">'salt',</span> <span class="pre">'signature',</span> <span class="pre">'time_stamp']</span></em><a class="headerlink" href="#ou.serializers.SignaturesSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.serializers.SignaturesSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#ou.serializers.SignaturesSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.models.Signatures" title="ou.models.Signatures"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signatures</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ou.tests">
+<span id="ou-tests-module"></span><h2>ou.tests module<a class="headerlink" href="#module-ou.tests" title="Permalink to this heading"></a></h2>
+<p>Test module from Django Framework.</p>
+<p>Holds all test cases for this application.
+Run tests with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">test</span></code>.</p>
+<p>Be aware: throughout this project we rather use PyTest. The tests defined here
+are not complete, they’re just implemented to complete the functionality of the
+Djano Framework.
+PyTest is also used for the Continuous Integration implementation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.tests.APIKeysTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.tests.</span></span><span class="sig-name descname"><span class="pre">APIKeysTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.tests.APIKeysTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test case for the API Keys endpoint.</p>
+<p>During set up of the test case the framework logs in with
+user admin.</p>
+<p>This test case has two stages:
+* test_api_reachable - Tests if API endpoint is reachable
+* test_api_returns_data - Tests if API endpoint returns sane data</p>
+<p>Test case succeeds if 2/2 tests are OK.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.tests.APIKeysTestCase.fixtures">
+<span class="sig-name descname"><span class="pre">fixtures</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['ou/tests.json']</span></em><a class="headerlink" href="#ou.tests.APIKeysTestCase.fixtures" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.tests.APIKeysTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ou.tests.APIKeysTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.tests.APIKeysTestCase.test_api_add_key">
+<span class="sig-name descname"><span class="pre">test_api_add_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ou.tests.APIKeysTestCase.test_api_add_key" title="Permalink to this definition"></a></dt>
+<dd><p>Test POST of new key (adding key).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.tests.APIKeysTestCase.test_api_reachable">
+<span class="sig-name descname"><span class="pre">test_api_reachable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ou.tests.APIKeysTestCase.test_api_reachable" title="Permalink to this definition"></a></dt>
+<dd><p>Test if API endpoint is reachable, test if HTTP-status is code 200</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.tests.APIKeysTestCase.test_api_returns_data">
+<span class="sig-name descname"><span class="pre">test_api_returns_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ou.tests.APIKeysTestCase.test_api_returns_data" title="Permalink to this definition"></a></dt>
+<dd><p>Test is returned data is sane.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ou.urls">
+<span id="ou-urls-module"></span><h2>ou.urls module<a class="headerlink" href="#module-ou.urls" title="Permalink to this heading"></a></h2>
+<p>This module holds the URL endpoints of the application.</p>
+<p>API-endpoints are defined in the router.
+GUI-endpoints are defined in the urlpatterns.</p>
+</section>
+<section id="module-ou.views">
+<span id="ou-views-module"></span><h2>ou.views module<a class="headerlink" href="#module-ou.views" title="Permalink to this heading"></a></h2>
+<p>This module contains frontendviews and gives an implementation of the API-endpoints.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.views.IndexView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">IndexView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.IndexView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListView</span></code></p>
+<p>Index views, shows the latest signatures.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.IndexView.context_object_name">
+<span class="sig-name descname"><span class="pre">context_object_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'latest_signature_list'</span></em><a class="headerlink" href="#ou.views.IndexView.context_object_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ou.views.IndexView.get_queryset">
+<span class="sig-name descname"><span class="pre">get_queryset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.IndexView.get_queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.IndexView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ou/index.html'</span></em><a class="headerlink" href="#ou.views.IndexView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.views.KeyView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">KeyView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.KeyView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListView</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeyView.context_object_name">
+<span class="sig-name descname"><span class="pre">context_object_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'my_public_keys'</span></em><a class="headerlink" href="#ou.views.KeyView.context_object_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeyView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#ou.views.KeyView.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.models.Keys" title="ou.models.Keys"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keys</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeyView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ou/keys.html'</span></em><a class="headerlink" href="#ou.views.KeyView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">KeysViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.KeysViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelViewSet</span></code></p>
+<p>API endpoint for keys.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.KeysViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.KeysViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.KeysViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.KeysViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#ou.views.KeysViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Keys:</span> <span class="pre">c55aa56fa92e1fa54d71006c1194f9401e065d7ae2d3c20edf0310717f58fe57&gt;,</span> <span class="pre">&lt;Keys:</span> <span class="pre">f517069a424d598dfb62c18b0c445ee19a1849fcdf2c8db4e39aa0a5df278c7041425d4a24171e33ade9652b6a0d64e6f65d19c65b011ed73f04bb9dfffc4f99&gt;]&gt;</span></em><a class="headerlink" href="#ou.views.KeysViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#ou.views.KeysViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.serializers.KeysSerializer" title="ou.serializers.KeysSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeysSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.KeysViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.KeysViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ou.views.Keys_View">
+<span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">Keys_View</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.Keys_View" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.views.SignView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">SignView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.SignView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListView</span></code></p>
+<p>View to sign documents.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#ou.views.SignView.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.models.Signatures" title="ou.models.Signatures"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signatures</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ou/sign.html'</span></em><a class="headerlink" href="#ou.views.SignView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">SignaturesViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.SignaturesViewSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelViewSet</span></code></p>
+<p>API endpoint for signatures.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.basename">
+<span class="sig-name descname"><span class="pre">basename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.basename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.permission_classes">
+<span class="sig-name descname"><span class="pre">permission_classes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.permissions.IsAuthenticated'&gt;]</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.permission_classes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;QuerySet</span> <span class="pre">[&lt;Signatures:</span> <span class="pre">file.txt&gt;,</span> <span class="pre">&lt;Signatures:</span> <span class="pre">state1.png&gt;]&gt;</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#ou.views.SignaturesViewSet.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.serializers.SignaturesSerializer" title="ou.serializers.SignaturesSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SignaturesSerializer</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.SignaturesViewSet.suffix">
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ou.views.SignaturesViewSet.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ou.views.VerifyView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">VerifyView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.VerifyView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListView</span></code></p>
+<p>View to verify signature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.VerifyView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#ou.views.VerifyView.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#ou.models.Signatures" title="ou.models.Signatures"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signatures</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ou.views.VerifyView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ou/verify.html'</span></em><a class="headerlink" href="#ou.views.VerifyView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ou.views.upload_file">
+<span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">upload_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.upload_file" title="Permalink to this definition"></a></dt>
+<dd><p>Uploads file, saves file to filesystem, signs file and
+stores signature in database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> – Django request-object. request.FILES is used to handle the upload</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a redirect to ou/sign.html with the new uploaded
+file on success (otherwise redirect to ou/sign.html without
+that file).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ou.views.verify_signature">
+<span class="sig-prename descclassname"><span class="pre">ou.views.</span></span><span class="sig-name descname"><span class="pre">verify_signature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ou.views.verify_signature" title="Permalink to this definition"></a></dt>
+<dd><p>Verifies signature of a given filename. Both the filename and the signature
+should be given. The given signature will be matched against the key in the
+database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request.POST</strong><strong>[</strong><strong>'file_name'</strong><strong>]</strong> – The filename of the file on the filesystem of the server</p></li>
+<li><p><strong>request.POST</strong><strong>[</strong><strong>'signature'</strong><strong>]</strong> – The signature to test against</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a redirect to ou/verify.html with the result of the verification.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-ou">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ou" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="authority.html" class="btn btn-neutral float-left" title="authority package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Charmaine Noten, Lisanne Tor, Nick Huijsmans.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

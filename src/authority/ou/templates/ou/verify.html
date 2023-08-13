@@ -1,0 +1,29 @@
+
+
+{% load static %}
+
+   
+<link rel="stylesheet" type="text/css" href="{% static 'ou/style.css' %}">   
+
+
+<h1>Verify a signature</h1>
+
+    <form action="{% url 'ou:verify_result'  %}" method="post">
+    {% csrf_token %}
+    <label for="file_name">File name: </label>
+    <input id="file_name" type="text" name="file_name" value="{{ current_name }}">
+    <label for="signature">Signature: </label>
+    <input id="signature" type="text" name="signature" value="{{ current_signature }}">
+
+    <br><br>
+    <input type="submit" value="Verify">
+    </form>
+
+    {% if uploaded_file_url %}
+    <div class="page"><p class="signature">{{ uploaded_file_url }}</    p></a></div>
+   {% endif %}
+
+    <h4>Click on "Verify" to validate a signature</h4>
+
+   <p><a href="{% url 'ou:index' %}"><h4>Check the list of signatures</h4></a></p>
+

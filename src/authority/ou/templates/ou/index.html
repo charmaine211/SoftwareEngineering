@@ -1,0 +1,43 @@
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ou/style.css' %}">
+
+<h1>Signing Authority Application</h1>
+
+{% if user.is_authenticated %}
+
+    <p><a href="{% url 'users:logout' %}"><h4>Click here to logout</h4></a></p>
+
+{% else %}
+
+    <p><a href="{% url 'users:login' %}"><h4>Click here to login</h4></a></p>
+    <p><a href="{% url 'users:register_user' %}"><h4>Click here to register</h4></a></p>
+
+{% endif %}
+
+<p><a href="{% url 'ou:sign' %}"><h4>Click here to obtain a signature on a document</h4></a></p>
+<p><a href="{% url 'ou:verify' %}"><h4>Click here to verify a signature</h4></a></p>
+<p><a href="{% url 'ou:keys2' %}"><h4>Click here for your keys.</h4></a></p>
+
+
+<h2>List of signatures</h2>
+
+{% if latest_signature_list %}
+
+    {% for s in latest_signature_list %}
+<h4>Signature: {{ s.id }} generated {{ s.time_stamp }}</a></h4>
+
+    <div class="page">        <ul>
+            <li><p class="signature">{{ s.file_name }}</p></li>
+            <li><p class="signature">{{ s.signature }}</p></li>
+        </ul></div><br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No signatures available.</p>
+{% endif %}
+
+
+

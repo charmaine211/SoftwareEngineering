@@ -1,0 +1,20 @@
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ou/style.css' %}">
+
+<h1>Register</h1>
+
+{% if form.errors %}
+
+    <p>There was an error with your form</p>
+
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

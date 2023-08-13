@@ -1,0 +1,444 @@
+[
+    {
+        "model": "ou.keys",
+        "pk": 1,
+        "fields": {
+            "key": "c55aa56fa92e1fa54d71006c1194f9401e065d7ae2d3c20edf0310717f58fe57",
+            "role": "private"
+        }
+    },
+    {
+        "model": "ou.keys",
+        "pk": 2,
+        "fields": {
+            "key": "f517069a424d598dfb62c18b0c445ee19a1849fcdf2c8db4e39aa0a5df278c7041425d4a24171e33ade9652b6a0d64e6f65d19c65b011ed73f04bb9dfffc4f99",
+            "role": "public"
+        }
+    },
+    {
+        "model": "ou.signatures",
+        "pk": 1,
+        "fields": {
+            "key_used": 1,
+            "file_name": "file.txt",
+            "digest": "test",
+            "salt": "test",
+            "signature": "8f1fa6c89cd2cadde4208303e95f8501cf2526baab1d55ae5dd5590d4dee87e32d04a86a3680f3c9247ec5160f3846bec2f8172165be2d8c37f7574ea9a1f300",
+            "time_stamp": "2021-03-01T12:07:11.410Z"
+        }
+    },
+    {
+        "model": "ou.signatures",
+        "pk": 2,
+        "fields": {
+            "key_used": 1,
+            "file_name": "state1.png",
+            "digest": "test",
+            "salt": "test",
+            "signature": "bef3538f1e5222b1c256ae6a8cc53cf0a6fb8a367412999e0fcc13077bfd9efd8fc59b002994ba2906c2161042f6f7b13b2fb2a2da51498c48f79c8810a59546",
+            "time_stamp": "2021-03-01T12:14:06.278Z"
+        }
+    },
+    {
+        "model": "ou.signatures",
+        "pk": 3,
+        "fields": {
+            "key_used": 1,
+            "file_name": "STM32CubeProgrammer.desktop",
+            "digest": "test",
+            "salt": "test",
+            "signature": "ee9b1e9c9140100c8d9ec0bf2253a9d08bc22155bfd455cae14e4f658cece9e27d0228faee25c62f506ae95e12378f725c2589e8fb42347ee5c62954b0525f6b",
+            "time_stamp": "2021-03-02T08:25:29.665Z"
+        }
+    },
+    {
+        "model": "ou.signatures",
+        "pk": 4,
+        "fields": {
+            "key_used": 1,
+            "file_name": "Django_document.pdf",
+            "digest": "test",
+            "salt": "test",
+            "signature": "6a8ac6befd88b332fe0c558d67635a23192031524a5d530850a5a417275945ebea31a408b6a307ebc549f294a77741caf71a6e7e508ae5f962006b0b548c0ea7",
+            "time_stamp": "2022-12-11T14:15:09.983Z"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add keys",
+            "content_type": 1,
+            "codename": "add_keys"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change keys",
+            "content_type": 1,
+            "codename": "change_keys"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete keys",
+            "content_type": 1,
+            "codename": "delete_keys"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view keys",
+            "content_type": 1,
+            "codename": "view_keys"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add signatures",
+            "content_type": 2,
+            "codename": "add_signatures"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change signatures",
+            "content_type": 2,
+            "codename": "change_signatures"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete signatures",
+            "content_type": 2,
+            "codename": "delete_signatures"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view signatures",
+            "content_type": 2,
+            "codename": "view_signatures"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 3,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 3,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 3,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 3,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 4,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 4,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 4,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 4,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 5,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 5,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 5,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 5,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 6,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 6,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 6,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 6,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 7,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 7,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 7,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 7,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 8,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 8,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 8,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 8,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$xCCOUUPFPWCoP2xuLUubI9$2//TVAOyE+szh+sGZ+esnKteecR4XOJXaJH9gWhHA4o=",
+            "last_login": "2022-12-04T19:55:41.276Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin@admin.admin",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-03-01T11:31:23.867Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "ou",
+            "model": "keys"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "ou",
+            "model": "signatures"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "n8ztit5wtal71oq844l7q9iky1xdldu0",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlmJ_1DS5wzWrneNA8iW4qRC3B0ipYD2zcx7iQjbWuLWeYkziYsYxel3Q0gPrjugO9Rbk6nVdZlR7oo8aJdTI35eD_fvoEAv39phPmdF2gKkoIwxAztE720ABrRWQfYDcmITeLSZErLTxCqAdiEZFu8PCYQ5JA:1lGhIu:9C5os8VHOIYnv0H-4G8FKKIUXxyxp1aUUxquTbpnioE",
+            "expire_date": "2021-03-15T12:05:36.244Z"
+        }
+    }
+]

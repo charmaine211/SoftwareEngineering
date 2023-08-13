@@ -1,0 +1,205 @@
+swagger: "2.0"
+info:
+  description: "This is the IntiSign API. \ You can find more about the IntiSign application at https://www.intisign.nl. \ "
+  version: "1.0.0"
+  title: "IntiSign API 1.0"
+  termsOfService: "http://www.intisign.nl/terms/"
+  contact:
+    email: "api-support@intisign.nl"
+  license:
+    name: "Proprietary"
+    url: "http://intisign.nl"
+host: "api.intisign.nl"
+basePath: "/v1"
+tags:
+- name: "Signatures"
+  description: "Calls related to signatures"
+  externalDocs:
+    description: "Find out more"
+    url: "http://intisign.nl"
+- name: "Keys"
+  description: "Calls related to keys that belong to a user and platform"
+  externalDocs:
+    description: "Find out more"
+    url: "http://intisign.nl"
+schemes:
+- "http"
+- "https"
+paths:
+  /signatures/:
+    get:
+      tags:
+      - "signatures"
+      summary: "Get a list of signatures"
+      description: "This call returns a list of signatures the authenticated user has access to."
+      operationId: "getSignatures"
+      responses:
+        "200":
+          description: "Successful operation."
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/SignaturesList"
+        "403":
+          description: "No access (invalid username/password or insufficient rights)."
+  /signatures/{id}/:
+    get:
+      tags:
+      - "signatures"
+      summary: "Get a specific signature"
+      description: "This call returns the data of the signature with the given ID. The signature ID can be retrieved from the path in the URL."
+      operationId: "getSignaturesByID"
+      parameters:
+        - name: id
+          in: path
+          description: ID of signature to return
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: "Successful operation."
+          schema:
+            $ref: "#/definitions/Signatures"
+        "403":
+          description: "No access (invalid username/password or insufficient rights)."
+        "404":
+          description: "Signature with given ID not found."
+
+  /keys/:
+    get:
+      tags:
+      - "keys"
+      summary: "Get a list of keys"
+      description: "This call returns a list of signatures the authenticated user has access to."
+      operationId: "getKeys"
+      responses:
+        "200":
+          description: "Successful operation."
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/KeysList"
+        "403":
+          description: "No access (invalid username/password or insufficient rights)."
+    post:
+      tags:
+      - "keys"
+      summary: "Add a new key"
+      description: "This call adds a new key to the database."
+      operationId: "postKey"
+      consumes:
+      - multipart/form-data
+      parameters:
+        - name: key
+          in: formData
+          description: The new key
+          required: true
+          type: string
+        - name: role
+          in: formData
+          description: The role of the new key
+          required: true
+          type: string
+          enum:
+          - "public"
+          - "private"
+        - name: owner
+          in: formData
+          description: The owner of the new key
+          required: true
+          type: integer
+        - name: platform_used
+          in: formData
+          description: The platorm where this key is used
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: "Successful operation."
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Keys"
+        "403":
+          description: "No access (invalid username/password or insufficient rights)."
+definitions:
+  SignaturesList:
+    type: "object"
+    properties:
+      count:
+        type: "integer"
+        example: "1"
+      next:
+        type: "integer"
+        example: "null"
+      previous:
+        type: "integer"
+        example: "null"
+      results:
+        type: "array"
+        items:
+          $ref: "#/definitions/Signatures"
+  Signatures:
+    type: "object"
+    properties:
+      digest:
+        type: "string"
+        description: "File digest"
+        example: "test"
+      salt:
+        type: "string"
+        description: "File salt"
+        example: "test"
+      file_name:
+        type: "string"
+        example: "file.txt"
+      signature:
+        type: "string"
+        description: "The generated signature"
+        example: "8f1fa6c89cd2cadde4208303e95f8501cf2526baab1d55ae5dd5590d4dee87e32d04a86a3680f3c9247ec5160f3846bec2f8172165be2d8c37f7574ea9a1f300"
+      url:
+        type: "string"
+        description: "API call to the specific signature"
+        example: "https://api.intisign.nl/v1/ou/signatures/1/"
+    xml:
+      name: "Signature"
+  KeysList:
+    type: "object"
+    properties:
+      count:
+        type: "integer"
+        example: "1"
+      next:
+        type: "integer"
+        example: "null"
+      previous:
+        type: "integer"
+        example: "null"
+      results:
+        type: "array"
+        items:
+          $ref: "#/definitions/Keys"
+  Keys:
+    type: "object"
+    properties:
+      key:
+        type: "string"
+        description: "The key"
+        example: "c55aa56fa92e1fa54d71006c1194f9401e065d7ae2d3c20edf0310717f58fe57"
+      owner:
+        type: "integer"
+        description: "The ID of the user this key belongs to"
+        example: "1"
+      platform:
+        type: "integer"
+        description: "The ID of the platform this key belongs to"
+        example: "1"
+      role:
+        type: "string"
+        description: "The role of this key"
+        example: "public"
+        enum: 
+        - "public"
+        - "private"
+    xml:
+      name: "Key"
